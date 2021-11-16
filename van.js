@@ -1,4 +1,4 @@
-const balance = document.getElementById('balance');
+const amount = document.getElementById('amount');
 const money_plus = document.getElementById('money-plus');
 const money_minus = document.getElementById('money-minus');
 const list = document.getElementById('list');
@@ -68,7 +68,7 @@ function addTransactionDOM(transaction)
   list.appendChild(item);
 }
 
-// Update the balance, income and expense
+// Update the amount, profit and loss
 function updateValues()
 {
   const amounts = transactions.map(transaction => transaction.amount);
@@ -85,7 +85,7 @@ function updateValues()
     -1
   ).toFixed(2);
 
-  balance.innerText = `$${total}`;
+  amount.innerText = `$${total}`;
   money_plus.innerText = `$${income}`;
   money_minus.innerText = `$${expense}`;
 }
